@@ -1,0 +1,59 @@
+{
+    "General": {
+        "Casename": "Demo case 2",
+        "Type": "T2",
+        "Description": "Demo case desc",
+        "Date": "15\/05\/2018",
+        "Currency": "EUR",
+        "Unit": "PJ",
+        "Version": "3.0"
+    },
+    "Year": [
+        2000,
+        2005,
+        2010,
+        2015,
+        2020,
+        2025,
+        2030,
+        2035,
+        2040,
+        2045,
+        2050
+    ],
+    "Sector": [
+        "Industry",
+        "Transport",
+        "Residential",
+        "Commercial",
+        "Agriculture",
+        "Fishing",
+        "Non Energy Use",
+        "Other"
+    ],
+    "Commodity": [
+        "Coal",
+        "Oil",
+        "Gas",
+        "Biofuels",
+        "Waste",
+        "Peat",
+        "Oil Shale",
+        "Electricity",
+        "Heat"
+    ],
+    "Technology": [
+        "Coal",
+        "Oil",
+        "Gas",
+        "Biofuels",
+        "Waste",
+        "Peat",
+        "Oil Shale",
+        "Nuclear",
+        "Geothermal",
+        "Solar",
+        "Wind",
+        "Hydro"
+    ]
+}

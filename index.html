@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+      <title>esst login</title>
+      <meta charset="UTF-8" />
+      <meta name="Generator" content="EditPlus" />
+      <meta name="Author" content="vk" />
+      <meta name="Keywords" content="esst" />
+      <meta name="Description" content="" />
+
+      <script src="https://google.github.io/traceur-compiler/bin/traceur.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.19.31/system.js"></script>
+
+      <link rel="shortcut icon" href="Theme/favicon-bar-chart-o.ico" type="image/x-icon">
+      
+      <!-- <link rel="stylesheet" href="References/jqwidgets/styles/jqx.base.css" type="text/css" /> -->
+      <link rel="stylesheet" type="text/css" href="Theme/bootstrap/css/bootstrap.css" /> 
+      <link rel="stylesheet" type="text/css" href="Theme/inputmaterial.css" />
+      <script type="text/javascript" src="References/jquery/jquery-3.1.1.min.js"></script>
+      <!-- <script type="text/javascript" src="Theme/bootstrap/js/bootstrap.min.js"></script>
+      <script src="References/jquery-lang-js-master/js.cookie.js" charset="utf-8" type="text/javascript"></script>
+
+      <script type="text/javascript" src="References/jqwidgets/__jqx-all.js"></script> -->
+      <body>
+            <div class="container">
+                  <div class="row">
+                        <div class="col-md-6 col-md-offset-3" style="height:150px">
+                              <div id="msgcontainer" style="padding-top:80px"></div>
+                        </div>
+                  </div>
+                  <div id="jqxNotification" style="margin-right:120px;">
+                        <div id="jqxNotificationContent" lang="en"></div>
+                    </div>
+                  <div class="row">
+                        <div class="col-sm-6 col-md-6 col-sm-offset-3 col-md-offset-3 text-center">
+                              <div class="box-shadow card backwhite">
+                                    <h1>ESST ver.3.0.</h1>
+                                    <h4>Energy Scenario Simulation Tool</h4>
+                                    <br/>
+                                    <!-- <div id="login"></div>  -->
+                                    <form action="" name="loginform" id="loginform" method="post">
+                                          <div class="group">
+                                            <input type="text" name="username" required id="username">
+                                            <span class="highlight"></span>
+                                            <span class="bar"></span>
+                                            <labelm>username</labelm>
+                                          </div>
+                                        
+                                          <div class="group">
+                                            <input type="password" name="password" required id="password">
+                                            <span class="highlight"></span>
+                                            <span class="bar"></span>
+                                            <labelm>password</labelm>
+                                          </div>
+                                        
+                                          <button class="btn btn-primary" style="width:50%" id="login" name="login" type="submit">Login</button>
+                                        
+                                        </form>
+                                    <br/>
+                              </div>
+                        </div>
+                  </div>
+            </div>
+            <div id="myModal" class="modal fade" role="dialog">
+                  <div class="modal-dialog">
+                        <!-- Modal content-->
+                        <div class="modal-content" style="width:750px">
+                              <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <h4 class="modal-title">About ESST</h4>
+                              </div>
+                              <div class="modal-body">
+                                    <p>ESST ver 1.0. </p>
+                                          <br/> All suggestions for improving this manual, based on user experience, are welcome
+                                          and should be addressed to: Planning and Economic Studies Section, Department of
+                                          Nuclear Energy,
+                                          <br/> Wagrame Strasse 5, P.O. Box 100, A-1400 Vienna, Austria</p>
+                              </div>
+                              <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                              </div>
+                        </div>
+                  </div>
+            </div>
+            <script>System.import('Auth/login/login.js');</script>
+      </body>
+</html>

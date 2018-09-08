@@ -1,0 +1,105 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script src="https://google.github.io/traceur-compiler/bin/traceur.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.19.31/system.js"></script>
+
+    <link runat="server" rel="icon" href="Theme/favicon-bar-chart-o.ico" type="image/x-icon" />
+    <link href="Theme/font-awesome-4.7.0/css/font-awesome.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="References/jqwidgets/styles/jqx.base.css" type="text/css" />
+    <link rel="stylesheet" href="References/jqwidgets/styles/jqx.bootstrap.css" type="text/css" />
+    <link rel="stylesheet" href="References/jqwidgets/styles/jqx.darkblue.css" type="text/css" />
+    <link rel="stylesheet" href="References/jqwidgets/styles/jqx.metro.css" type="text/css" />
+    <link rel="stylesheet" href="References/jqwidgets/styles/jqx.blackberry.css" type="text/css" />
+    <link rel="stylesheet" href="References/jqwidgets/styles/jqx.flat.css" type="text/css" />
+    <link rel="stylesheet" href="References/jqwidgets/styles/jqx.energyblue.css" type="text/css" />
+
+    <link rel="stylesheet" href="Theme/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="Theme/ace/ace.min.css" class="ace-main-stylesheet" id="main-ace-style" />
+    <link rel="stylesheet" href="Theme/FunkyRadio.css" type="text/css" />
+    <link rel="stylesheet" href="Theme/Custom.css" type="text/css" />
+    <!-- jquery-->
+    <script type="text/javascript" src="References/jquery/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="References/jquery/jquery-1.12.1.ui.min.js"></script>
+    <script type="text/javascript" src="References/jquery/jquery.cookie.js"></script>
+
+    <!--crossroad-->
+    <script type="text/javascript" src="References/signals/signals.min.js"></script>
+    <script type="text/javascript" src="References/crossroad/crossroad.min.js"></script>
+    <script type="text/javascript" src="References/hasher/hasher.min.js"></script>
+
+    <!--bootbox-->
+    <script type="text/javascript" src="References/bootbox/bootbox.min.js"></script>
+
+    <!-- bootstrap-->
+    <script type="text/javascript" src="Theme/bootstrap/js/bootstrap.min.js"></script>
+
+    <!--lang master-->
+    <script src="References/jquery-lang-js-master/js.cookie.js" charset="utf-8" type="text/javascript"></script>
+    <script src="References/jquery-lang-js-master/jquery-lang.js" charset="utf-8" type="text/javascript"></script>
+    <script src="References/jquery-lang-js-master/initLang.js" charset="utf-8" type="text/javascript"></script>
+
+    <!-- jqx widgets-->
+    <script type="text/javascript" src="References/jqwidgets/__jqx-all.js"></script>
+
+    <title>ESST-Energy Scenarios Simulation Tool</title>
+</head>
+
+<body class="no-skin">
+    <div id="loadermain" style="display:none">
+        <div class="loader "></div>
+        <h4></h4>
+    </div>
+    <header></header>
+    <div class="main-container ace-save-state" id="main-container">
+        <div id="sidebar" class="sidebar responsive ace-save-state sidebar-fixed menu-min">
+        </div>
+        <div class="main-content">
+            <div class="main-content-inner">
+                <div class="breadcrumbs ace-save-state breadcrumbs-fixed" id="breadcrumbs">
+                    <ul class="breadcrumb">
+                        <li class="active" id="l1" lang="en" style="visibility: hidden;"></li>
+                        <li class="active" id="l2" lang="en" style="visibility: hidden;"></li>
+                        <li class="active" id="l3" lang="en" style="visibility: hidden;"></li>
+                    </ul>
+                </div>
+                <div class="page-content">
+                    <div class="ace-settings-container" id="ace-settings-container">
+                        <div  id="ace-settings-btn">
+                            <i class="ace-icon blue bigger-140 fa fa-bookmark"></i>
+                        </div>
+                        <div class="ace-settings-box clearfix" id="ace-settings-box">
+                            <div class="ace-settings-item" id="casePicker"></div>
+                        </div>
+                    </div>
+                    <div id="jqxNotification" style="margin-right:120px;">
+                        <div id="jqxNotificationContent" lang="en"></div>
+                    </div>
+                    <div id="container"></div>
+                    <div class="esst-content"></div>
+                </div>
+            </div>
+        </div>
+        <a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse">
+            <i class="ace-icon fa fa-angle-double-up icon-only bigger-110"></i>
+        </a>
+        <footer class="footer"></footer>
+    </div>
+    <div id="modals"></div>
+    <script> $("header").load("Includes/navbar.html"); </script>
+    <script> $("#sidebar").load("Includes/accordion.html"); </script>
+    <script> $("#modals").load("Includes/modals.html"); </script>
+    <script> $("footer").load("Includes/footer.html"); </script>
+    
+        <!--<script src="References/ace/ace-extra.min.js"></script>-->
+    <script src="References/ace/ace-elements.min.js"></script>
+    <script src="References/ace/ace.min.js"></script>
+    <script>System.import('main.js');</script>
+    <script type="text/javascript" src="Classes/js/Routes.Class.js"></script>
+</body>
+
+</html>

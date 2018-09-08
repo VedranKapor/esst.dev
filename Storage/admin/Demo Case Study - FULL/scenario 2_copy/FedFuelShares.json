@@ -1,0 +1,274 @@
+[
+    {
+        "Sector": "Industry",
+        "Share": {
+            "Commodity": [
+                {
+                    "Fuel": "Coal"
+                },
+                {
+                    "Fuel": "Oil"
+                },
+                {
+                    "Fuel": "Gas"
+                },
+                {
+                    "Fuel": "Biofuels"
+                },
+                {
+                    "Fuel": "Waste"
+                },
+                {
+                    "Fuel": "Peat"
+                },
+                {
+                    "Fuel": "Oil Shale"
+                },
+                {
+                    "Fuel": "Electricity"
+                },
+                {
+                    "Fuel": "Heat"
+                }
+            ]
+        }
+    },
+    {
+        "Sector": "Transport",
+        "Share": {
+            "Commodity": [
+                {
+                    "Fuel": "Coal"
+                },
+                {
+                    "Fuel": "Oil"
+                },
+                {
+                    "Fuel": "Gas"
+                },
+                {
+                    "Fuel": "Biofuels"
+                },
+                {
+                    "Fuel": "Waste"
+                },
+                {
+                    "Fuel": "Peat"
+                },
+                {
+                    "Fuel": "Oil Shale"
+                },
+                {
+                    "Fuel": "Electricity"
+                },
+                {
+                    "Fuel": "Heat"
+                }
+            ]
+        }
+    },
+    {
+        "Sector": "Residential",
+        "Share": {
+            "Commodity": [
+                {
+                    "Fuel": "Coal"
+                },
+                {
+                    "Fuel": "Oil"
+                },
+                {
+                    "Fuel": "Gas"
+                },
+                {
+                    "Fuel": "Biofuels"
+                },
+                {
+                    "Fuel": "Waste"
+                },
+                {
+                    "Fuel": "Peat"
+                },
+                {
+                    "Fuel": "Oil Shale"
+                },
+                {
+                    "Fuel": "Electricity"
+                },
+                {
+                    "Fuel": "Heat"
+                }
+            ]
+        }
+    },
+    {
+        "Sector": "Commercial",
+        "Share": {
+            "Commodity": [
+                {
+                    "Fuel": "Coal"
+                },
+                {
+                    "Fuel": "Oil"
+                },
+                {
+                    "Fuel": "Gas"
+                },
+                {
+                    "Fuel": "Biofuels"
+                },
+                {
+                    "Fuel": "Waste"
+                },
+                {
+                    "Fuel": "Peat"
+                },
+                {
+                    "Fuel": "Oil Shale"
+                },
+                {
+                    "Fuel": "Electricity"
+                },
+                {
+                    "Fuel": "Heat"
+                }
+            ]
+        }
+    },
+    {
+        "Sector": "Agriculture",
+        "Share": {
+            "Commodity": [
+                {
+                    "Fuel": "Coal"
+                },
+                {
+                    "Fuel": "Oil"
+                },
+                {
+                    "Fuel": "Gas"
+                },
+                {
+                    "Fuel": "Biofuels"
+                },
+                {
+                    "Fuel": "Waste"
+                },
+                {
+                    "Fuel": "Peat"
+                },
+                {
+                    "Fuel": "Oil Shale"
+                },
+                {
+                    "Fuel": "Electricity"
+                },
+                {
+                    "Fuel": "Heat"
+                }
+            ]
+        }
+    },
+    {
+        "Sector": "Fishing",
+        "Share": {
+            "Commodity": [
+                {
+                    "Fuel": "Coal"
+                },
+                {
+                    "Fuel": "Oil"
+                },
+                {
+                    "Fuel": "Gas"
+                },
+                {
+                    "Fuel": "Biofuels"
+                },
+                {
+                    "Fuel": "Waste"
+                },
+                {
+                    "Fuel": "Peat"
+                },
+                {
+                    "Fuel": "Oil Shale"
+                },
+                {
+                    "Fuel": "Electricity"
+                },
+                {
+                    "Fuel": "Heat"
+                }
+            ]
+        }
+    },
+    {
+        "Sector": "Non Energy Use",
+        "Share": {
+            "Commodity": [
+                {
+                    "Fuel": "Coal"
+                },
+                {
+                    "Fuel": "Oil"
+                },
+                {
+                    "Fuel": "Gas"
+                },
+                {
+                    "Fuel": "Biofuels"
+                },
+                {
+                    "Fuel": "Waste"
+                },
+                {
+                    "Fuel": "Peat"
+                },
+                {
+                    "Fuel": "Oil Shale"
+                },
+                {
+                    "Fuel": "Electricity"
+                },
+                {
+                    "Fuel": "Heat"
+                }
+            ]
+        }
+    },
+    {
+        "Sector": "Other",
+        "Share": {
+            "Commodity": [
+                {
+                    "Fuel": "Coal"
+                },
+                {
+                    "Fuel": "Oil"
+                },
+                {
+                    "Fuel": "Gas"
+                },
+                {
+                    "Fuel": "Biofuels"
+                },
+                {
+                    "Fuel": "Waste"
+                },
+                {
+                    "Fuel": "Peat"
+                },
+                {
+                    "Fuel": "Oil Shale"
+                },
+                {
+                    "Fuel": "Electricity"
+                },
+                {
+                    "Fuel": "Heat"
+                }
+            ]
+        }
+    }
+]

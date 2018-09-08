@@ -1,0 +1,195 @@
+<div class="row">
+    <div class="col-md-12">
+        <div class="widget-box">
+            <div class="widget-header">
+                <h4 class="widget-title">Final energy demand by sectors</h4>
+                
+                <div class="widget-toolbar">
+                    <a href="#" data-action="collapse">
+                        <i class="ace-icon fa fa-chevron-up esst"></i>
+                    </a>
+                </div>
+                <div class="widget-toolbar">
+                    <a href="#" data-action="fullscreen">
+                        <i class="ace-icon fa fa-expand orange2"></i>
+                    </a>
+                </div>
+                <div class="widget-toolbar">
+                    <a href="#" data-action="mix" id="open-dashboard" class="grey tooltip-info" data-toggle="modal" data-target="#dashboardModal">
+                        <i class="ace-icon fa fa-bar-chart"></i>
+                    </a>
+                </div>
+                <div class="widget-toolbar">
+                    <a href="#" data-action="mix" id="saveFED" class="tooltip-info" data-toggle="tooltip" data-placement="top" title="save data">
+                        <i class="ace-icon fa fa-save success"></i>
+                    </a>
+                </div>
+                <div class="widget-toolbar">
+                    <a href="#" data-action="mix" id="invokeAggregates" class=" tooltip-info" data-toggle="tooltip" data-placement="top"
+                        title="Display Aggregates">
+                        <i class="ace-icon fa fa-list-alt esst"></i>
+                    </a>
+                </div>
+                <div class="widget-toolbar">
+                    <a href="#" data-action="mix" id="xlsMainGrid" class=" tooltip-info" data-toggle="tooltip" data-placement="top" title="Export grid to excel">
+                        <i class="ace-icon fa fa-file-excel-o esst"></i>
+                    </a>
+                </div>
+                <div class='widget-toolbar'>
+                    <a href='#' data-action='mix'  id='decDownNested'  class='grey tooltip-info'  data-toggle='tooltip' data-placement='top' title='Decrease decimal places'>
+                        <i class='ace-icon fa fa-arrow-circle-o-down orange'></i>
+                    </a>
+                </div>
+                <div class='widget-toolbar'>
+                    <a href='#' data-action='mix'  id='decUpNested'  class='grey tooltip-info'  data-toggle='tooltip' data-placement='top' title='Increase decimal places'>
+                        <i class='ace-icon fa fa-arrow-circle-o-up nest'></i>
+                    </a>
+                </div>
+                <div class='widget-toolbar'>
+                    <a id='msgPg' style='display:none; padding: 10px'></a>
+                </div>
+                <div class='widget-toolbar'>
+                    <a id='msgPgError' style='display:none; padding: 10px'></a>
+                </div>
+            </div>
+            <div class="widget-body">
+                <div class="widget-main">
+                    <div id="jqxgrid"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-12">
+        <div class="widget-box" id="childBox" style="display:none">
+            <div class="widget-header">
+                <h4 class="widget-title" id="sharesTitle">Final energy demand shares by commodities</h4>
+                
+                <div class="widget-toolbar">
+                    <a href="#" data-action="collapse">
+                        <i class="ace-icon fa fa-chevron-up esst"></i>
+                    </a>
+                </div>
+                <div class="widget-toolbar">
+                    <a href="#" data-action="fullscreen">
+                        <i class="ace-icon fa fa-expand orange2"></i>
+                    </a>
+                </div>
+
+                <div class="widget-toolbar">
+                    <a href="#" data-action="mix" id="saveShares" data-sector="Industry" data-sectorID="0" class="tooltip-info" data-toggle="tooltip" data-placement="top" title="save data">
+                        <i class="ace-icon fa fa-save success"></i>
+                    </a>
+                </div>
+                <div class="widget-toolbar">
+                    <a href="#" data-action="mix" id="invokeAggregatesChild" class=" tooltip-info" data-toggle="tooltip" data-placement="top"
+                        title="Dsiplay Aggregates">
+                        <i class="ace-icon fa fa-list-alt esst"></i>
+                    </a>
+                </div>
+                <div class="widget-toolbar">
+                    <a href="#" data-action="mix" id="xlsMainGrid" class=" tooltip-info" data-toggle="tooltip" data-placement="top" title="Export grid to excel">
+                        <i class="ace-icon fa fa-file-excel-o esst"></i>
+                    </a>
+                </div>
+                <div class='widget-toolbar'>
+                    <a id='msgCg' style='display:none; padding: 10px'></a>
+                </div>
+                <div class='widget-toolbar'>
+                    <a id='msgCgError' style='display:none; padding: 10px'></a>
+                </div>
+            </div>
+            <div class="widget-body">
+                <div class="widget-main">
+                    <div id="jqxgridShares"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- Modal for add user-->
+<div class="modal top fade" id="dashboardModal">
+    <div class="modal-dialog" style="width:600px">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Dashboard project overview</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-12" id="chartTimeDiv">
+                        <div class="widget-box transparent" id="widget-box-12">
+                            <div class="widget-header">
+                                <h4 class="widget-title">Final Energy Demand Chart</h4>
+                                <div class="widget-toolbar">
+                                    <a href="#" data-action="collapse">
+                                        <i class="ace-icon fa fa-chevron-up esst"></i>
+                                    </a>
+                                </div>                
+                                <div class="widget-toolbar">
+                                    <a href="#" data-action="mix" id="barChart" data-chartType="barChart"  class="switchChart grey tooltip-info" data-toggle="tooltip" data-placement="top" title="Bar Chart">
+                                        <i class="ace-icon fa fa-bar-chart"></i>
+                                    </a>
+                                </div>
+                                <div class="widget-toolbar">
+                                    <a href="#" data-action="mix" id="lineChart" data-chartType="lineChart" class="switchChart grey tooltip-info" data-toggle="tooltip" data-placement="top" title="Line Chart">
+                                        <i class="ace-icon fa fa-line-chart"></i>
+                                    </a>
+                                </div>
+                                <div class="widget-toolbar">
+                                    <a href="#" data-action="mix" id="areaChart" data-chartType="areaChart" class="switchChart grey tooltip-info" data-toggle="tooltip" data-placement="top" title="Area Chart">
+                                        <i class="ace-icon fa fa-area-chart"></i>
+                                    </a>
+                                </div>
+                                <div class="widget-toolbar">
+                                    <a href="#" data-action="mix" id="stackedChart" data-chartType="stackedChart" class="switchChart green tooltip-info" data-toggle="tooltip" data-placement="top" title="Stacked Column Chart">
+                                        <i class="ace-icon fa fa-bars"></i>
+                                    </a>
+                                </div>
+                
+                                <div class="widget-toolbar">
+                                    <a href="#" data-action="" id="syncChart" class="tooltip-info" data-toggle="tooltip" data-placement="top" title="Refresh pasted data" style='display:none;'>
+                                        <i  class="ace-icon warning  fa fa-refresh fa-bounce"></i>
+                                    </a>
+                                </div>
+                            </div>
+        
+                            <div class="widget-body">
+                                <div class="widget-main padding-6 no-padding-left no-padding-right">
+                                    <div id="jqxchart" style="width: 100%; height: 300px;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <div class="col-md-12" id="chartTimeDiv">
+                        <div class="widget-box transparent" id="widget-box-12">
+                            <div class="widget-header">
+                                <h4 class="widget-title lighter">Chart Box</h4>
+                                <div class="widget-toolbar ">
+                                    <a href="#" data-action="collapse">
+                                        <i class="ace-icon fa fa-chevron-up"></i>
+                                    </a>
+                                </div>
+                                <div class="widget-toolbar">
+                                    <div style="margin-top: 5px" id="jqxTimeType"></div>
+                                </div>
+                            </div>
+                            <div class="widget-body">
+                                <div class="widget-main padding-6 no-padding-left no-padding-right">
+                                    <div id="jqxTimechart" style="width: 100%; height: 300px;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

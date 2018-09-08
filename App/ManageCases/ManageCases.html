@@ -1,0 +1,136 @@
+<!-- <script> $.getScript("App/ManageCases/ManageCases.js"); </script> -->
+
+<div class="row">
+    <div class="col-md-6" style="margin-bottom:5px">
+        <a class="btn btn-default btn-sm" href="#/CreateCase">
+            <span class='glyphicon glyphicon-plus'></span>Create new case</a>
+        <button type="button" class="btn btn-default btn-sm" data-toggle="modal" data-target="#modalrestore" lang="en">
+            <span class='glyphicon glyphicon-open'></span>Restore case</button>
+    </div>
+    <div class="breadcrumbs col-md-offset-3 col-md-3" style="margin-bottom:5px; background-color: #fff;  border-bottom: 0px solid #E5E5E5; ">
+        <div class="nav-search" id="nav-search">
+            <span class="input-icon">
+                <input type="text" placeholder="Search ..." class="nav-search-input" autocomplete="off" id="CaseSearch" />
+                <i class="ace-icon fa fa-search nav-search-icon"></i>
+            </span>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <div class="panel-group" id="cases"></div>
+    </div>
+</div>
+
+<!-- Modal edit ps -->
+<div id="modaleditps" class="modal right fade" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" lang="en" data-lang-token="description">Edit planning study</h4>
+            </div>
+            <div class="modal-body">
+                <div class="esst lighter smaller"><i class="ace-icon fa fa-paperclip smaller-90"></i>Case study name</div>
+                <input type="text" class="form-control" id="mtitleps_edit" name="mtitleps_edit" />
+                <span id="messageps" style="display:none"></span>
+                <input type="hidden" id="titleps_old" name="titleps_old" />
+                </br>
+                <div class="esst lighter smaller"><i class="ace-icon fa fa-paperclip smaller-90"></i>Case study description</div>
+                <textarea rows="5" id="mdescps_edit" class="form-control"></textarea>
+            </div>
+            <div class="modal-footer">
+                <button type="submit" id="btnSaveEditPS" name="btnSaveEditPS" class="btn btn-default btn-sm" lang="en">
+                    <span class='glyphicon glyphicon-floppy-disk'></span>Save data</button>
+                <button type="button" class="btn btn-default btn-sm" data-dismiss="modal" lang="en">
+                    <span class='glyphicon glyphicon-remove'></span>Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal edit cs -->
+<div id="modaleditcs" class="modal right fade" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" lang="en">Edit scenario</h4>
+            </div>
+            <div class="modal-body">
+                <div class="esst lighter smaller"><i class="ace-icon fa fa-paperclip smaller-90"></i>Case study name</div>
+                <input type="text" class="form-control" id="mtitleps_editcs" name="mtitleps_editcs" readonly/>
+                </br>
+                <input type="hidden" id="titlecs_old" name="titlecs_old" />
+                <div class="esst lighter smaller"><i class="ace-icon fa fa-paperclip smaller-90"></i>Scenario name</div>
+                <input type="text" id="titlecs_edit" class="form-control" />
+            </div>
+            <div class="modal-footer">
+                <button type="submit" id="btnSaveEditCS" name="btnSaveEditCS" class="btn btn-default btn-sm" lang="en">
+                    <span class='glyphicon glyphicon-floppy-disk'></span>Save data</button>
+                <button type="button" class="btn btn-default btn-sm" data-dismiss="modal" lang="en">
+                    <span class='glyphicon glyphicon-remove'></span>Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal description ps -->
+<div id="modaldescriptionps" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title" lang="en" data-lang-token="description" id="mtitleps_desc"></h4>
+            </div>
+            <div class="modal-body">
+                <div id="mdescriptionps"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal new scenario-->
+<div id="newCaseModal" class="modal right fade" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" lang="en">Create new scenario</h4>
+            </div>
+            <div class="modal-body">
+                <div class="form-group" id="fgtitlecs">
+                    <div class="esst lighter smaller"><i class="ace-icon fa fa-paperclip smaller-90"></i>Case name</div>
+                    <input type="text" id="CS_title" name="CS_title" class="form-control titlepsreadonly" disabled />
+                    </br>
+                    <div class="esst lighter smaller"><i class="ace-icon fa fa-paperclip smaller-90"></i>Scenario name</div>
+                    <input type="text" id="titlecs" class="form-control" placeholder="Name of the scenario" />
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-default btn-sm" id="btnNewCS" type="button"  lang="en">
+                    <span class='glyphicon glyphicon-floppy-disk'></span>Save data</button>
+                <button type="button" class="btn btn-default btn-sm" data-dismiss="modal" lang="en">
+                    <span class='glyphicon glyphicon-remove'></span>Close</button>
+            </div>
+        </div>
+        <input type="hidden" name="action" value="a" />
+    </div>
+</div>
+
+<!--Modal restore cs -->
+<div id="modalrestore" class="modal right fade" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" lang="en">Restore case study</h4>
+            </div>
+            <div class="modal-body">
+                <div id="jqxFileUpload"></div>
+                <span id="messageup" style="display:none"></span>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default btn-sm" data-dismiss="modal" lang="en">
+                    <span class='glyphicon glyphicon-remove'></span>Close</button>
+            </div>
+        </div>
+    </div>
+</div>

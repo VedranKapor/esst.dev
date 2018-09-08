@@ -1,0 +1,136 @@
+
+
+<!--<div class="alert alert-default" id="title"><b lang="en">Create case</b></div>-->
+<form id="case" action="" method="post" name="scenario">
+    <div class="row" style="margin-bottom: 5px;">
+        <div class="col-md-6">
+            <button type="submit" class="btn btn-default btn-sm" id="NewCS" style="display:none"><span class='glyphicon glyphicon glyphicon-plus-sign'></span></button>
+            <button type="submit" class="btn btn-default btn-sm" name="Submit" id="Submit" lang="en" style="display:none"><span class='glyphicon glyphicon-floppy-disk'></span>Create new case study</button>
+            <button type="submit" class="btn btn-default btn-sm" name="Edit" id="Edit" lang="en" style="display:none"><span class='glyphicon glyphicon-edit'></span>Edit case study</button>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-md-6">
+            <div class="label-title" style="margin-bottom: 5px;" lang="en"><i class="fa fa-info" style="color:#777"></i>General information</div>
+            <div class="row" style="margin-bottom: 5px;">
+                <div class="col-md-12">
+                    <div class="esst lighter smaller"><i class="ace-icon fa fa-paperclip smaller-90"></i>Case Study name</div>
+                    <input name="Casename" id="casename" type="text" class="form-control" placeholder="Case name" lang="en"/>
+                    <input type="hidden" id="casenameHidden" name="CasenameHidden" />
+                </div>
+            </div>
+
+            <div class="row" style="margin-bottom: 15px;">
+                <div class="col-md-12 input_fields_wrap">
+                    <div class="esst lighter smaller"><i class="ace-icon fa fa-paperclip smaller-90"></i>Scenario name </div>
+                    <input name="Scenarioname" id="scenarioname" type="text" class="form-control" placeholder="Scenario name" lang="en"/>
+                </div>
+                <input type="hidden" id="sc_index" name="sc_index" />
+            </div>
+
+            <div class="row" style="margin-bottom: 0px;">
+                <div class="col-md-12">
+                        <div class="esst lighter smaller"><i class="ace-icon fa fa-paperclip smaller-90"></i>Type of simulation</div>
+                        <div class="funkyradio">
+                            <div class="funkyradio-primary">
+                                <input type="radio" name="Type" id="T1" value="T1"/>
+                                <label for="T1">Simulation for electricity</label>
+                            </div>
+                            <div class="funkyradio-primary">
+                                <input type="radio" name="Type" id="T2" value="T2" checked/>
+                                <label for="T2">Simulation for full scale energy system</label>
+                            </div>
+                        </div>
+                </div>  
+            </div>
+            <div class="row" style="margin-bottom: 5px;">
+                <div class="col-md-12">
+                    <div class="esst lighter smaller"><i class="ace-icon fa fa-paperclip smaller-90"></i>Case study description</div>
+                    <textarea name="Description" id="description"  class="form-control"  placeholder="Description" lang="en"/>
+                </div>  
+            </div>
+            <div class="row" style="margin-bottom: 20px;">
+                <div class="col-md-4">
+                    <div class="esst lighter smaller"><i class="ace-icon fa fa-paperclip smaller-90"></i>Date</div>
+                    <div  id="datepicker" name="Date"></div>
+                </div>
+                <div class="col-md-4">
+                    <div class="esst lighter smaller"><i class="ace-icon fa fa-paperclip smaller-90"></i>Currency</div>
+                    <div id="Currency"></div>
+                </div>
+                <div class="col-md-4">
+                    <div class="esst lighter smaller"><i class="ace-icon fa fa-paperclip smaller-90"></i>Unit</div>
+                    <div id="Unit"></div>
+                </div>
+            </div>
+            <div class="label-title" style="margin-bottom: 5px;" lang="en"><i class="fa fa-calendar" style="color:#777"></i>Enter start and end year of scenario</div>
+             
+            <div class="row" id="years" style="margin-bottom: 5px;">
+               <div class="col-md-3">
+                    <input id="startYear" type="text" class="form-control input-sm" placeholder="Start year" lang="en">
+                </div>
+                <div class="col-md-3">
+                    <input id="endYear" type="text" class="form-control input-sm" placeholder= "End year" lang="en">
+                </div>
+                
+                <div class="col-md-6 btn-group" id="btngroup" style="display: none;" role="group" aria-label="...">
+                    <button id="checkall" type="text" class="btn btn-default btn-sm" style="display: none;"><span class='fa fa-calendar-check-o' style="color:#fff"></span>Check all</button>
+                    <button id="uncheckall" type="text" class="btn btn-default btn-sm"><i class='fa fa-calendar-times-o' style="color:#fff"></i>Uncheck all</button>
+                    <button id="checkx2" type="text" class="btn btn-default btn-sm"><span class='fa fa-calendar-check-o' style="color:#fff"></span>x2</button>
+                    <button id="checkx5" type="text" class="btn btn-default btn-sm"><span class='fa fa-calendar-check-o' style="color:#fff"></span>x5</button> 
+                </div>
+            </div>   
+                                   
+            <div class="row" style="margin-bottom: 20px;">
+                <div class="col-md-12">
+                    <div id="yearsselect"></div>
+                </div>
+                <div class="col-md-12">
+                    <div id="yearsselectmsg"></div>
+                </div>
+            </div>   
+        </div>
+        
+        <div class="col-md-2">
+            <div class="row" style="margin-bottom: 5px;">
+                <div class="col-md-12">
+                    <div id="title" class="label-title" lang="en"><span class='glyphicon glyphicon-folder-open'></span>Sectors</div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div id='Sector'></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-2">
+            <div class="row" style="margin-bottom: 5px;">
+                <div class="col-md-12">
+                    <div id="title" class="label-title" lang="en"><span class='glyphicon glyphicon-folder-open'></span>Commodities</div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div id='Commodity'></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-2">
+            <div class="row" style="margin-bottom: 5px;">
+                <div class="col-md-12">
+                    <div id="title" class="label-title" lang="en"><span class='glyphicon glyphicon-folder-open'></span>Technologies</div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div id='Technology'></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+<!-- <script> $.getScript("App/AddCase/AddCase.js"); </script> -->
+
